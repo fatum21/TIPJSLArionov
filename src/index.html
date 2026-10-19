@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Список задач (ПР3)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <h1 class="app__title">Список задач</h1>
+
+    <!-- Сводка выполнения задач (progress.js) -->
+    <section class="summary" id="summary">
+      <div class="summary__item"><span class="summary__label">Всего</span><span class="summary__value" id="stat-total">0</span></div>
+      <div class="summary__item"><span class="summary__label">Выполнено</span><span class="summary__value" id="stat-completed">0</span></div>
+      <div class="summary__item"><span class="summary__label">Осталось</span><span class="summary__value" id="stat-remaining">0</span></div>
+      <div class="summary__item"><span class="summary__label">Прогресс</span><span class="summary__value" id="stat-percent">0.0%</span></div>
+      <div class="summary__item"><span class="summary__label">Статус</span><span class="summary__value" id="stat-status">-</span></div>
+    </section>
+
+    <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      <div class="progress__bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Фильтры по статусу -->
+    <nav class="filters" id="filters">
+      <button type="button" class="filters__btn is-active" data-filter="all">Все</button>
+      <button type="button" class="filters__btn" data-filter="notStarted">Не начато</button>
+      <button type="button" class="filters__btn" data-filter="inProgress">В работе</button>
+      <button type="button" class="filters__btn" data-filter="done">Завершено</button>
+    </nav>
+
+    <!-- Список задач -->
+    <ul class="tasklist" id="tasklist"></ul>
+
+    <p class="message" id="message" hidden></p>
+  </main>
+
+  <script src="progress.js"></script>
+  <script src="tasks.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+
+.DS_Store
+.env
+.env.*
+
+playwright-report/
+test-results/

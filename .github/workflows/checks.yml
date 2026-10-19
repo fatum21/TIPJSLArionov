@@ -1,0 +1,31 @@
+name: Проверки
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  selftest:
+    name: Самопроверка
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Задание 1. Сводка
+        run: node checks/check1.js
+
+      - name: Задание 2. Отбор задач
+        run: node checks/check2.js
+
+      - name: Задание 3. Смена статуса
+        run: node checks/check3.js
+
+      - name: Все требования сразу
+        run: node checks/selftest.js
