@@ -6,7 +6,7 @@
 'use strict';
 
 var path = require('path');
-var progress = require(path.join(__dirname, '..', 'src', 'progress.js'));
+var progress = require(path.join(__dirname, '..', 'practice-01', 'progress.js'));
 
 function run(title, totalTasks, completedTasks) {
   var result = progress.summarizeProgress(totalTasks, completedTasks);
