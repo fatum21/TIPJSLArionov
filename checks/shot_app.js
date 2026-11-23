@@ -15,7 +15,7 @@ const path = require('path');
   page.on('pageerror', (e) => errors.push(String(e)));
   page.on('console', (m) => { if (m.type() === 'error') errors.push(m.text()); });
 
-  const file = 'file:///' + path.join(__dirname, '..', 'src', 'index.html').replace(/\\/g, '/');
+  const file = 'file:///' + path.join(__dirname, '..', 'practice-03', 'index.html').replace(/\\/g, '/');
   await page.goto(file);
   await page.waitForSelector('.task');
 
