@@ -6,8 +6,8 @@
 'use strict';
 
 var path = require('path');
-var progress = require(path.join(__dirname, '..', 'src', 'progress.js'));
-var tm = require(path.join(__dirname, '..', 'src', 'tasks.js'));
+var progress = require(path.join(__dirname, '..', 'practice-01', 'progress.js'));
+var tm = require(path.join(__dirname, '..', 'practice-02', 'tasks.js'));
 
 var passed = 0;
 var failed = 0;
