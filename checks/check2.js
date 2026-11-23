@@ -6,7 +6,7 @@
 'use strict';
 
 var path = require('path');
-var tasksModule = require(path.join(__dirname, '..', 'src', 'tasks.js'));
+var tasksModule = require(path.join(__dirname, '..', 'practice-02', 'tasks.js'));
 
 var demoTasks = tasksModule.demoTasks;
 var getPendingTasks = tasksModule.getPendingTasks;
